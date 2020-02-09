@@ -1,44 +1,56 @@
-let sounds = [
-    'no-no-no-no-no',
-    'what$$-Me$$',
-    'consider-having-them-arrested',
+"use strict";
+var sounds = [
     'this-is-bad',
+    'what$$-Me$$',
+    'we-have-been-hoodwinked',
+    'no-no-no-no-no',
     'very-bad-day',
+    'consider-having-them-arrested',
     'one-of-the-worst-days',
     'suspended-with-pay',
     'blasphemy',
     'how-do-you-do-that$',
     'what-the-hell-is-going-on$',
-    'heh-heh-heh-heh,-what-do-you-think$',
-    'what-the-hell-is-goin-on-I-have-no-idea',
+    'heh-heh,-what-do-you-think$',
+    'WTH-is-goin-on,-I-have-no-idea',
     'i-have-no-idea',
     'oh-no-you-didn\'t',
     'we\'re-in-a-different-era',
-    'we-have-been-hoodwinked',
     'y\'all-take-it-easy,-I\'m-out',
-    'i-am-in-a-very-very-very-good-mood'
-]
-
-document.addEventListener("DOMContentLoaded", () => {
-    let soundsDiv = document.getElementById('sounds');
-    
-    sounds.forEach(el => {
-        addSound(soundsDiv, el)
+    'i-am-in-a-very-very-good-mood'
+];
+// On Document Ready
+document.addEventListener("DOMContentLoaded", function () {
+    var soundsDiv = document.getElementById('sounds');
+    sounds.forEach(function (el) {
+        addSound(soundsDiv, el);
     });
-    sounds.forEach(el => {
-        document.getElementById(el + '-btn').addEventListener('click', () => {
-            document.getElementById(el).play();
-        });
-    })
 });
-
+// adds a sound button to the app
 function addSound(containerDiv, soundName) {
-    var prettyName = soundName.replace(/-/g, ' ').replace(/\$/g, '?');
-    prettyName =  prettyName.charAt(0).toUpperCase() + prettyName.slice(1);
-    containerDiv.innerHTML += `
-        <audio id="` + soundName + `" src="assets/sounds/` + soundName + `.mp3" preload="metadata" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
-        <button id="` + soundName + `-btn" class="button is-danger">` + prettyName + `</button>
-        `;
+    // create audio node
+    var audio = document.createElement('audio');
+    audio.id = soundName;
+    audio.src = 'assets/sounds/' + soundName + '.mp3';
+    audio.preload = 'metadata';
+    audio.innerText = 'Your browser does not support the audio element.';
+    // create button node
+    var button = document.createElement('button');
+    button.classList.add('button', 'is-link', 'is-loading');
+    button.innerText =
+        // replace '-' with ' ' and replace '$' with '?' for button inner text
+        soundName.charAt(0).toUpperCase()
+            + (soundName.replace(/-/g, ' ').replace(/\$/g, '?')).slice(1);
+    button.addEventListener('click', function () {
+        audio.play();
+    });
+    // remove loading animation after audio is loaded
+    audio.addEventListener('canplaythrough', function () {
+        console.log('Loaded: ' + soundName);
+        button.classList.remove('is-loading');
+    }, false);
+    audio.load();
+    // add both to DOM
+    containerDiv.appendChild(audio);
+    containerDiv.appendChild(button);
 }
