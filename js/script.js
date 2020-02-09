@@ -7,10 +7,15 @@ let sounds = [
     'blasphemy',
     'how-do-you-do-that',
     'what-the-hell-is-going-on',
-    'heh-heh-heh-heh-what-do-you-think',
+    'heh-heh-heh-heh,-what-do-you-think',
     'what-the-hell-is-goin-on-i-have-no-idea',
     'i-have-no-idea',
-    'oh-no-you-didn\'t'
+    'oh-no-you-didn\'t',
+    'we\'re-in-a-different-era',
+    'this-is-bad',
+    'we-have-been-hoodwinked',
+    'y\'all-take-it-easy,-I\'m-out',
+    'i-am-in-a-very-very-very-good-mood'
 ]
 
 document.addEventListener("DOMContentLoaded", () => {
