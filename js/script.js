@@ -41,24 +41,4 @@ function addSound(containerDiv, soundName) {
         </audio>
         <button id="` + soundName + `-btn" class="button is-danger">` + prettyName + `</button>
         `;
-    // var audio = document.getElementById(soundName);
-    // var button = document.getElementById(soundName + '-btn');
-    // audio.addEventListener('canplay', () => {
-    //     button.classList.remove('is-loading');
-    // });
-    // button.addEventListener('click', () => {
-    //     audio.play();
-    // });
 }
-
-// function onCanPlay(soundName) {
-//     console.log('poop');
-//     var audio = document.getElementById(soundName);
-//     var button = document.getElementById(soundName + '-btn');
-//     audio.addEventListener('canplay', () => {
-//         button.classList.remove('is-loading');
-//     });
-//     button.addEventListener('click', () => {
-//         audio.play();
-//     });
-// }
