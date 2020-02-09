@@ -3,6 +3,8 @@ let sounds = [
     'consider-having-them-arrested',
     'very-bad-day',
     'one-of-the-worst-days',
+    'suspended-with-pay',
+    'blasphemy'
 ]
 
 document.addEventListener("DOMContentLoaded", () => {
