@@ -4,7 +4,13 @@ let sounds = [
     'very-bad-day',
     'one-of-the-worst-days',
     'suspended-with-pay',
-    'blasphemy'
+    'blasphemy',
+    'how-do-you-do-that',
+    'what-the-hell-is-going-on',
+    'heh-heh-heh-heh-what-do-you-think',
+    'what-the-hell-is-goin-on-i-have-no-idea',
+    'i-have-no-idea',
+    'oh-no-you-didn\'t'
 ]
 
 document.addEventListener("DOMContentLoaded", () => {
