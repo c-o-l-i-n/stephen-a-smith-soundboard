@@ -2,6 +2,7 @@ let sounds = [
     'no-no-no-no-no',
     'consider-having-them-arrested',
     'very-bad-day',
+    'one-of-the-worst-days',
 ]
 
 document.addEventListener("DOMContentLoaded", () => {
