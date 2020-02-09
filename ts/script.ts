@@ -2,7 +2,8 @@ let sounds = [
     'this-is-bad',
     'what$$-Me$$',
     'we-have-been-hoodwinked',
-    'no-no-no-no-no',
+    'stay-off-the-weeeeeeed',
+    'no-no-no-no',
     'very-bad-day',
     'consider-having-them-arrested',
     'one-of-the-worst-days',
@@ -16,7 +17,7 @@ let sounds = [
     'oh-no-you-didn\'t',
     'we\'re-in-a-different-era',
     'y\'all-take-it-easy,-I\'m-out',
-    'i-am-in-a-very-very-good-mood'
+    'i-am-in-a-very-very-good-mood',
 ]
 
 // On Document Ready
