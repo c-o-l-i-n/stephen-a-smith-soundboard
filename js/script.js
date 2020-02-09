@@ -1,7 +1,7 @@
 let sounds = [
     'no-no-no-no-no',
     'consider-having-them-arrested',
-    'very-bad-day'
+    'very-bad-day',
 ]
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -9,10 +9,12 @@ document.addEventListener("DOMContentLoaded", () => {
     
     sounds.forEach(el => {
         addSound(soundsDiv, el)
+    });
+    sounds.forEach(el => {
         document.getElementById(el + '-btn').addEventListener('click', () => {
             document.getElementById(el).play();
         });
-    });   
+    })
 });
 
 function addSound(containerDiv, soundName) {
