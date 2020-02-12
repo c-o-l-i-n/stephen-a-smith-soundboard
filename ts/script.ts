@@ -40,7 +40,7 @@ function addSound(containerDiv: HTMLDivElement, soundName: string) {
 
     // create button node
     let button: HTMLButtonElement = document.createElement('button')
-    button.classList.add('button', 'is-link', 'is-loading')
+    button.classList.add('button', 'is-primary', 'is-loading')
     button.innerText =
         // replace '-' with ' ' and replace '$' with '?' for button inner text
         soundName.charAt(0).toUpperCase()
@@ -51,7 +51,6 @@ function addSound(containerDiv: HTMLDivElement, soundName: string) {
 
     // remove loading animation after audio is loaded
     audio.addEventListener('canplaythrough', () => {
-        console.log('Loaded: ' + soundName)
         button.classList.remove('is-loading')
     }, false)
     audio.load()

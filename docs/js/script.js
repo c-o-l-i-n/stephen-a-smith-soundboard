@@ -37,7 +37,7 @@ function addSound(containerDiv, soundName) {
     audio.innerText = 'Your browser does not support the audio element.';
     // create button node
     var button = document.createElement('button');
-    button.classList.add('button', 'is-link', 'is-loading');
+    button.classList.add('button', 'is-primary', 'is-loading');
     button.innerText =
         // replace '-' with ' ' and replace '$' with '?' for button inner text
         soundName.charAt(0).toUpperCase()
@@ -47,7 +47,6 @@ function addSound(containerDiv, soundName) {
     });
     // remove loading animation after audio is loaded
     audio.addEventListener('canplaythrough', function () {
-        console.log('Loaded: ' + soundName);
         button.classList.remove('is-loading');
     }, false);
     audio.load();
