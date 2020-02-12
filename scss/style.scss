@@ -48,9 +48,18 @@ input, textarea, button, select, a {
     .button.is-primary {
         margin: 0 .75rem .75rem 0 !important;
         background-color: #D61E26;
-    
-        &:hover {
+
+        
+        &:active {
             background-color: #B31921;
+        }
+    }
+
+    &.no-touch {
+        .button.is-primary {
+            &:hover {
+                background-color: #B31921;
+            }
         }
     }
 }

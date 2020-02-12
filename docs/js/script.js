@@ -22,7 +22,11 @@ var sounds = [
 ];
 // On Document Ready
 document.addEventListener("DOMContentLoaded", function () {
+    var _a;
     var soundsDiv = document.getElementById('sounds');
+    if (!('ontouchstart' in document.documentElement)) {
+        (_a = document.querySelector('.buttons')) === null || _a === void 0 ? void 0 : _a.classList.add('no-touch');
+    }
     sounds.forEach(function (el) {
         addSound(soundsDiv, el);
     });

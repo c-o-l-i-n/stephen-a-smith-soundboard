@@ -23,11 +23,15 @@ let sounds = [
 // On Document Ready
 document.addEventListener("DOMContentLoaded", () => {
     let soundsDiv = <HTMLDivElement>document.getElementById('sounds')
+
+    if (!('ontouchstart' in document.documentElement)) {
+        document.querySelector('.buttons')?.classList.add('no-touch')
+    }
     
     sounds.forEach(el => {
         addSound(soundsDiv, el)
-    });
-});
+    })
+})
 
 // adds a sound button to the app
 function addSound(containerDiv: HTMLDivElement, soundName: string) {
